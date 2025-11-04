@@ -1,7 +1,14 @@
 import { Users, Handshake, Weight, ShieldCheck, TrendingUp } from 'lucide-react';
+import { motion } from 'framer-motion';
 
-const StatCard = ({ icon: Icon, label, value, sub }) => (
-  <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
+const StatCard = ({ icon: Icon, label, value, sub, delay = 0 }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 12 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.4 }}
+    transition={{ duration: 0.5, delay }}
+    className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md"
+  >
     <div className="flex items-center gap-3">
       <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-50 text-emerald-700">
         <Icon className="h-5 w-5" />
@@ -12,7 +19,7 @@ const StatCard = ({ icon: Icon, label, value, sub }) => (
         {sub && <p className="text-xs text-gray-500">{sub}</p>}
       </div>
     </div>
-  </div>
+  </motion.div>
 );
 
 export default function PilotStats() {
@@ -29,11 +36,11 @@ export default function PilotStats() {
           </div>
         </div>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
-          <StatCard icon={Users} label="Suppliers Onboarded" value="20" sub="Goal" />
-          <StatCard icon={Users} label="Buyers Onboarded" value="10" sub="Goal" />
-          <StatCard icon={Handshake} label="Deals Closed" value="15" sub="Target" />
-          <StatCard icon={Weight} label="Tonnes Moved" value="200" sub="Target" />
-          <StatCard icon={ShieldCheck} label="Verification Pass Rate" value="95%" sub="Target" />
+          <StatCard icon={Users} label="Suppliers Onboarded" value="20" sub="Goal" delay={0.0} />
+          <StatCard icon={Users} label="Buyers Onboarded" value="10" sub="Goal" delay={0.05} />
+          <StatCard icon={Handshake} label="Deals Closed" value="15" sub="Target" delay={0.1} />
+          <StatCard icon={Weight} label="Tonnes Moved" value="200" sub="Target" delay={0.15} />
+          <StatCard icon={ShieldCheck} label="Verification Pass Rate" value="95%" sub="Target" delay={0.2} />
         </div>
       </div>
     </section>
