@@ -1,6 +1,8 @@
 import HeroSection from './components/HeroSection';
 import PilotStats from './components/PilotStats';
 import FeatureGrid from './components/FeatureGrid';
+import SupplierIntake from './components/SupplierIntake';
+import BuyerSearch from './components/BuyerSearch';
 import CTASection from './components/CTASection';
 
 function Header() {
@@ -14,6 +16,8 @@ function Header() {
         <nav className="hidden items-center gap-6 text-sm text-gray-700 md:flex">
           <a href="#features" className="hover:text-gray-900">Features</a>
           <a href="#stats" className="hover:text-gray-900">Pilot KPIs</a>
+          <a href="#supplier-intake" className="hover:text-gray-900">Supplier Intake</a>
+          <a href="#buyer-search" className="hover:text-gray-900">Buyer Search</a>
           <a href="#get-started" className="rounded-md bg-emerald-600 px-3 py-1.5 font-medium text-white hover:bg-emerald-700">Get Started</a>
         </nav>
       </div>
@@ -46,6 +50,8 @@ export default function App() {
         <HeroSection />
         <PilotStats />
         <FeatureGrid />
+        <SupplierIntake />
+        <BuyerSearch />
         <CTASection />
       </main>
       <Footer />

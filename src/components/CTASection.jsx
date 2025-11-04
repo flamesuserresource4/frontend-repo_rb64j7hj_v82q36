@@ -9,7 +9,7 @@ export default function CTASection() {
             <h3 className="text-lg font-semibold text-gray-900">Supplier — List your byproducts</h3>
             <p className="mt-1 text-sm text-gray-600">Share photos and basic details. We’ll schedule a quick verification visit.</p>
             <a
-              href="#"
+              href="#supplier-intake"
               className="mt-4 inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-emerald-700"
             >
               Start Intake <ArrowRight className="h-4 w-4" />
@@ -20,7 +20,7 @@ export default function CTASection() {
             <h3 className="text-lg font-semibold text-gray-900">Buyer — Find verified lots</h3>
             <p className="mt-1 text-sm text-gray-600">Filter listings by type, grade, and city. Request samples or make offers.</p>
             <a
-              href="#"
+              href="#buyer-search"
               className="mt-4 inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-emerald-700"
             >
               Browse Listings <ArrowRight className="h-4 w-4" />
